@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡效果</title>
+    <link rel="shortcut icon" href="../img/bitbug_favicon.ico" type="image/x-icon" />
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+<style>
+    .parentElement {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .childElement {
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .line {
+        height: 5px;
+        width: 30px;
+        background: #61bdf0;
+        margin: 0 auto;
+        transition-property: all;
+        transition-duration: 3s;
+        transition-delay: 0s;
+        transition-timing-function: ease;
+    }
+</style>
+
+<body>
+    <div class="parentElement">
+        <div class="childElement">
+            <p style="margin-bottom: 20px">百度前端技术学院</p>
+            <p id="myTest" class="line">
+
+            </p>
+            <p style="margin-top: 20px">
+                <button type="button" class="btn btn-default" id="button" onclick="mytest()">切换样式</button>
+            </p>
+        </div>
+
+    </div>
+</body>
+<script>
+    function mytest() {
+        var p = document.getElementById("myTest");
+        var width = parseInt(p.style.width);
+        if (width > 30) {
+            p.style.width = "30px";
+            p.style.height = "5px";
+        } else {
+            p.style.width = "100px";
+            p.style.height = "5px";
+        }
+
+
+    }
+</script>
+
+</html>

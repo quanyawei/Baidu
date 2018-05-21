@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CSS 2D 变形</title>
+</head>
+<style>
+    .pare {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .pare>div {
+        display: inline-block;
+        border: 1px solid #c4c4c4;
+        line-height: 70px;
+        margin-left: 30px;
+    }
+
+    .pare div:nth-child(1) {
+        height: 70px;
+        width: 60px;
+    }
+
+    .pare div:nth-child(2) {
+        height: 70px;
+        width: 60px;
+        transform: skewX(30deg)
+    }
+
+    .pare div:nth-child(3) {
+        height: 70px;
+        width: 60px;
+        transform: scale(0.5, 1);
+    }
+
+    .pare div:nth-child(4) {
+        height: 70px;
+        width: 60px;
+        /* transform-origin: 100% 100%; */
+        transform: rotate(30deg);
+    }
+
+    .pare div:nth-child(5) {
+        height: 70px;
+        width: 60px;
+        transform: translate(10px,20px);
+    }
+
+    .pare div:nth-child(6) {
+        height: 70px;
+        width: 60px;
+        transform: rotate(30deg) skewX(30deg) scale(0.5,1) translate(10px,20px);
+    }
+</style>
+
+<body>
+    <div class="pare">
+        <div>
+            box1
+        </div>
+        <div>
+            box2
+        </div>
+        <div>
+            box3
+        </div>
+        <div>
+            box4
+        </div>
+        <div>
+            box5
+        </div>
+        <div>
+            box6
+        </div>
+    </div>
+</body>
+
+</html>
